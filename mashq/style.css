@@ -1,0 +1,110 @@
+html {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before {
+  box-sizing: inherit;
+}
+
+*::after {
+  box-sizing: inherit;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  position: absolute;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bosh,
+.tepa,
+.past,
+.chap,
+.ong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: transform 0.4s ease ;
+}
+
+.bosh {
+  z-index: 1;
+  background-color: #fff;
+  transition: transform 0.4s ease 0.6s ;
+}
+
+.inner:hover .tepa {
+  transform: translateY(-75%);
+  border-radius: 50%;
+}
+
+
+
+.tepa {
+  transition: transform 0.4s ease 1.2s,
+  border-radius 0.5s ease 2s;
+  background-color: brown;
+
+}
+.inner:hover .past {
+  transform: translateY(75%);
+  border-radius: 50%;
+}
+
+.past {
+  transition: transform 0.4s ease 0.4s, border-radius 0.4s ease 2s;
+  background-color: aqua;
+}
+
+.inner:hover .chap {
+  transform: translateX(-75%);
+  border-radius: 50%;
+}
+
+.chap {
+  transition: transform 0.4s ease 0.8s,
+  border-radius 0.5s ease 2s ;
+  background-color: cornflowerblue;
+}
+.ong {
+  transition: transform 0.4s ease, border-radius 0.4s ease 2s;
+  background-color: chocolate;
+}
+.inner:hover .ong {
+  transform: translateX(75%);
+  border-radius: 50%;
+}
+
+.inner:active .ong, 
+.inner:active .past, 
+.inner:active .chap, 
+.inner:active .tepa {
+  transform: translate(0);
+} 
+
+
